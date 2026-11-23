@@ -1,48 +1,46 @@
-# 🌿 Cañamo del Meta S.A.S. ZOMAC
+# Cañamo del Meta S.A.S. ZOMAC — Sitio web
 
-Plataforma web para **CAÑAMO DEL META S.A.S. ZOMAC** — Proyecto agroindustrial de cannabis no psicoactivo (CBD y cáñamo) en San Martín, Meta, Colombia.
-
-Licencia vigente: **Resolución 0303 de 2021** expedida por el Ministerio de Justicia y del Derecho.
-
-## Stack Tecnológico
-
-- **Frontend:** React 19 · TypeScript · Tailwind CSS 4 · Vite 8
-- **Backend:** Express (Node.js) · TypeScript
-- **Despliegue:** Render (Web Service)
-
-## Ejecutar Localmente
-
-**Requisitos:** Node.js v20+
-
-```bash
-npm install
-npm run dev
-```
-
-La app estará disponible en `http://localhost:3000`
-
-## Despliegue en Render
-
-1. Conectar este repositorio en [render.com](https://render.com)
-2. Configurar como **Web Service**
-3. Build Command: `npm install && npm run build`
-4. Start Command: `NODE_ENV=production npm start`
-5. Variables de entorno: `NODE_ENV=production`
+Sitio estático de una sola página (HTML + CSS + JS puro, sin dependencias ni build).
 
 ## Estructura
 
 ```
-├── server.ts            # Servidor Express + API endpoints
-├── src/
-│   ├── App.tsx          # Componente principal
-│   ├── components/      # Secciones: Hero, Portafolio, Regulatorio, etc.
-│   ├── assets/images/   # Imágenes del proyecto
-│   └── types.ts         # Tipos TypeScript
-├── public/assets/       # Assets estáticos (logo, PDF, fotos de predios)
-├── render.yaml          # Configuración de Render
-└── package.json
+.
+├── index.html
+├── .nojekyll
+├── .gitignore
+└── img/
+    ├── logo.png
+    ├── favicon.png
+    ├── apple-touch-icon.png
+    ├── invernadero.jpg
+    ├── panoramica.jpg
+    └── lote.jpg
 ```
 
-## Licencia
+## Ver en local
 
-© 2026 CAÑAMO DEL META S.A.S. ZOMAC — NIT 901.185.114-3. Todos los derechos reservados.
+Abrir `index.html` en el navegador, o con un servidor local:
+
+```bash
+python3 -m http.server 8000
+# http://localhost:8000
+```
+
+## Publicar con GitHub Pages
+
+1. Subir el repositorio a GitHub (rama `main`).
+2. En el repositorio: **Settings → Pages → Build and deployment**.
+3. En **Source** elegir **Deploy from a branch**, rama `main`, carpeta `/ (root)`.
+4. El sitio queda en `https://USUARIO.github.io/NOMBRE-REPO/`.
+
+Los enlaces a imágenes son relativos, por lo que funcionan también en subcarpetas.
+
+## Pendientes antes de publicar
+
+- [ ] Reemplazar `contacto@TU-DOMINIO.com` y el teléfono `+57 000 000 0000` en `index.html`.
+- [ ] Confirmar con el cliente el estado actual de la licencia (Resolución 0303 de 2021, vigencia de 5 años) y ajustar el bloque "Licencia".
+- [ ] Validar con el cliente las cifras proyectadas (costo < 0,05 USD/g, escala > 1.000 ha).
+- [ ] Reemplazar las fotos de `img/` por versiones de mayor resolución (las extraídas del dossier son de 384×512 px).
+- [ ] Conectar el formulario a un endpoint propio (hoy abre el cliente de correo con `mailto:`).
+- [ ] Al tener dominio, agregar `og:image` con URL absoluta.
