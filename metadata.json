@@ -1,0 +1,6 @@
+{
+  "name": "Andes Botánica — Cannabis Legal en Colombia",
+  "description": "Plataforma web en Node.js para el sector del cannabis medicinal, cáñamo industrial y cumplimiento regulatorio en Colombia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
