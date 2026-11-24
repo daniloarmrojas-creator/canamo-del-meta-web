@@ -40,6 +40,7 @@
     .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
     .logo{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--verde);font-size:1.1rem}
     .logo mark{background:#fff;padding:2px 8px;border-radius:6px;border:1px solid var(--borde)}
+    .logo-img{height:40px;width:auto;border-radius:8px;background:#fff;padding:4px 6px;display:block}
     nav ul{display:flex;gap:30px;list-style:none}
     nav a{font-size:.95rem;color:var(--gris);font-weight:500;transition:color .2s}
     nav a:hover{color:var(--verde)}
@@ -156,7 +157,8 @@
 <header>
   <div class="wrap nav">
     <a href="#" class="logo" aria-label="Cañamo del Meta — inicio">
-      <mark>CM</mark> CAÑAMO DEL META
+      <img src="img/logo.png" alt="Cañamo del Meta" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+      <span class="logo-texto" style="display:none">CAÑAMO DEL <mark>META</mark></span>
     </a>
     <button id="menu-btn" aria-label="Abrir menú">☰</button>
     <nav>
